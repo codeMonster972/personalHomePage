@@ -1,0 +1,302 @@
+/* -----------------------------------------------Color Scheme------------------------------------- */
+/*
+#030101 - black
+#11224D darkest blue
+#193A6F dark blue
+#2C599D blue
+#5B84C4 light blue
+#F98125 orange - 
+#FB9B50 light orange
+#c5c5ca - grey
+#e1ebef - off white
+*/
+
+/*-------------------------------------------------Main Styling------------------------------------ */
+.body_content {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    background-color: #e1ebef; 
+    max-width: 1224px;
+    line-height: 1.5;
+    font-size: 16px;
+    border: 2px solid #030101;
+    padding:0;
+    margin: auto;
+}  
+.whiteBackground{
+    background-color: white;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: normal;
+    color:#e1ebef;
+    margin:10px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+figure {
+    text-align: center;
+}
+main, footer{
+    padding:15px;
+}
+video{
+    width:100%;
+    height:100%;
+}
+/* Here I used the fr unit (fractional, fraction?).  I believe the auto unit does something similar. */
+#pictures{
+    padding:0;
+    border:none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+.col{
+    background-color: #99ccff;
+    width:100%;
+    margin:auto;
+    overflow: hidden;
+    color:#000000;
+    height:315px; 
+}
+
+main a:link, main a:visited{
+    color:#000000;
+}
+
+main a:hover{
+    color:#FB9B50;
+}
+
+main a:focus{
+    color:#ffa600a7;
+}
+
+main a:active{
+    color:#002affa7;
+}
+
+nav a:link, nav a:hover{
+    background-color:#F98125;
+    color:#2C599D;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 15px 32px;
+    font-family: "Freeman", sans-serif;
+}
+
+nav a:visited{
+    color:#11224D;
+}
+
+footer a:link, footer a:visited{
+    color:#e1ebef;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color:#ffffff;
+}
+
+/* ----------------------------------------------Header and Footer Backgrounds--------------------- */
+
+header.border {
+   border-bottom:2px solid #030101;
+   border-width:.1em; 
+}
+/* Here I found that when I set the header to sticky the images appeared over it when I scrolled up. */
+header{
+    position: sticky;
+    top: 0;
+    background-color: #11224D;
+    height: 200px;
+    z-index: 1;
+}
+
+h1.big{
+    font-size: 3rem;
+}
+
+.big:hover{
+    text-shadow: 0 0 10px #fff;
+    color: white;	 
+}
+
+#bigRed:hover figcaption, 
+#fishKiss:hover figcaption, 
+#knotTying:hover figcaption,
+#smallRangers:hover figcaption,
+#rvFamily:hover figcaption,
+#tkdSmall:hover figcaption{
+    visibility: visible;
+}
+
+figcaption{
+    visibility: hidden;
+    
+}
+figure img{
+    padding-bottom:10px;
+    
+}
+footer{
+    background-color: #193A6F;
+    color:#e1ebef;
+}
+
+#profilePic, #smileyFace{
+    float:left;
+    margin-right:20px;
+    width: 50%;
+}
+
+section:right{
+    float:right;
+}
+
+#projects, #education,#littleLemon{
+    display:inline-block;
+    width:98%;
+}
+p:first-of-type::first-letter{
+    font-size: 1.5em;
+}
+/* This was added to fulfill the requirements I missed last time for two pseudoclasses.*/
+main img:first-of-type{
+    filter: drop-shadow(5px 5px grey);
+    float:right;
+}
+/* ----------------------------------------------Full Screen--------------------------------- */
+
+@media screen and (min-width: 750px){
+    .columns{
+        columns: 2;
+    } 
+}
+/* ----------------------------------------------Tablet-------------------------------------- */
+@media screen and (max-width: 1000px) {
+    #pictures{
+        padding:0;
+        border:none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* ----------------------------------------------Phone--------------------------------------- */
+/* Making the nav section links look right after swithcing to column took some work.  I was forced to look at the dev tools in chrome to figure out what was 
+causing the overlaps.  I also adjusted font sizes and line spacing at one point.  */
+@media screen and (max-width: 750px){
+    nav{
+        flex-direction: column;   
+        -ms-flex: 1;
+        flex:1;
+    }
+    header{
+        height: 235px;
+    }
+    nav div{
+        font-size: .7em;
+        background-color: #F98125;
+    }
+    nav a:link, nav a:hover,nav a:visited{
+        color:#2C599D;
+        font-family: "Freeman", sans-serif;
+        background:none;
+        padding-top:0%;
+        padding-bottom: 0%;
+        border:none; 
+    }
+    nav a:visited{
+        color:#11224D;
+    }
+    #pictures{
+        padding:0;
+        border:none;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ----------------------------------------------------------------Form Styling------------------------- */
+form{
+    margin: 0 auto;
+    min-width: 350px;
+    padding: 1em;
+    background-color: rgb(240, 240, 240);
+  }
+  fieldset, form{
+    border: 1px solid #CCC;
+    border-radius: 1em;
+  }
+  fieldset{
+    background-color: white;
+  }
+  button{
+    height:2.5em;
+    border: 1px solid #909090;
+    border-radius: 1em;
+    font-weight:900;
+  }
+  #buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1%;
+    margin-top: 5px;
+  }
+#contactInfo{
+    display:grid;
+    line-height: 1.5em;
+    grid-template-columns: 1fr 3fr;
+}
+#contactInfo label, #contactInfo input {
+ margin:5px;
+}
+/* ------------------------------------------------------------------------Table Styling------------------------------------- */
+table {
+border-collapse: collapse;
+width:100%;
+text-align: center;
+}
+th {
+text-align: left;
+background-color:lightblue;
+color:black;
+}
+caption{
+font-size: 1.5rem;
+font-weight:bold;
+text-align:left;
+padding-bottom: 1rem;
+color: #F98125;
+}
+tbody{
+border-bottom: 3px solid black;
+}
+th {
+text-align: left;
+background-color:#11224D;
+color:white;
+border-top: none;
+text-align: center;
+font-size:1.3rem;
+}
+tbody tr:nth-child(even){
+background-color:#cccccc73;
+}
