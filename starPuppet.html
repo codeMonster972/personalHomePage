@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(105,136,192);
+            }
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+        </style>
+        <title>Smile!</title>
+        <link rel="icon" type="image/x-icon" href="">
+    </head>
+<body>
+    <div class="center">
+        <svg width="600" height="600" id="face">
+            <rect x="0" y="0" width="'600" height="600" fill="rgb(105,136,192)" />
+            <!-- This is the star's body/face. -->
+            <polygon points="300,0 330,225 450,150 375,270 600,300 375,330 450,450 330,375 300,600 270,375 150,450 225,330 0,300 225,270 150,150 270,225" style="fill:rgb(187,214,251);" />
+             
+            <!-- Background darkblue -->
+             
+              <!-- Smile on face. -->
+              <circle cx="300" cy="325" r="40" stroke="black" stroke-width="6" fill="rgb(187,214,251)" />
+              <!-- This is the black circle that opens the characters mouth to talk. -->
+              <circle id="mouth" style="visibility: hidden;" cx="300" cy="325" r="41" stroke="black" stroke-width="4" fill="black" />
+             <!-- This covers the top half of the circles that create the mouth. -->
+             <rect x="200" y="275" width="150" height="50" fill="rgb(187,214,251)" />
+              <circle id="wideMouth" style="visibility: hidden;" cx="300" cy="325" r="41" stroke="black" stroke-width="4" fill="black" />
+              <!-- The whites of the eyes. -->
+             <circle cx="250" cy="250" r="40" stroke="black" stroke-width="4" fill="white" />
+             <circle cx="350" cy="250" r="40" stroke="black" stroke-width="4" fill="white" />
+             <!-- The pupils. -->
+             <!-- Centered -->
+             <circle id="rightLookingCenter" cx="250" cy="250" r="15" fill="black" />
+             <circle id="leftLookingCenter" cx="350" cy="250" r="15" fill="black" />
+             <!-- Right -->]
+             <circle id="rightLookingRight" style="visibility: hidden;" cx="270" cy="250" r="15" fill="black" />
+             <circle id="leftLookingRight" style="visibility: hidden;" cx="370" cy="250" r="15" fill="black" />
+             <!-- Left -->
+             <circle id="rightLookingLeft" style="visibility: hidden;" cx="330" cy="250" r="15" fill="black" />
+             <circle id="leftLookingLeft" style="visibility: hidden;" cx="230" cy="250" r="15" fill="black" /> 
+             <!-- Down -->
+             <circle id="rightLookingDown" style="visibility: hidden;" cx="250" cy="270" r="15" fill="black" />
+             <circle id="leftLookingDown" style="visibility: hidden;" cx="350" cy="270" r="15" fill="black" /> 
+             <!-- Up -->
+             <circle id="rightLookingUp" style="visibility: hidden;" cx="250" cy="230" r="15" fill="black" />
+             <circle id="leftLookingUp" style="visibility: hidden;" cx="350" cy="230" r="15" fill="black" /> 
+            
+             <!-- Eyelids -->
+             <circle class="eyelid" id="eyelid1" style="visibility: hidden;" cx="250" cy="250" r="40" stroke="black" stroke-width="4" fill="rgb(187,214,251)" />
+             <circle class="eyelid" id="eyelid2" style="visibility: hidden;" cx="350" cy="250" r="40" stroke="black" stroke-width="4" fill="rgb(187,214,251)" />
+
+            
+        </svg>
+    </div>
+    <script>
+        //Mouth movement
+        document.body.addEventListener("keydown", openMouth);
+        function openMouth(e)
+        {
+            var div = document.getElementById("mouth");
+            if(e.key == "n"){
+                document.getElementById("mouth").style.visibility = "visible";
+            }
+        }
+        document.body.addEventListener("keyup", closeMouth);
+        function closeMouth(e)
+        {
+            var div = document.getElementById("mouth");
+            if(e.key == "n"){
+                document.getElementById("mouth").style.visibility = "hidden";
+            }
+        }
+
+        //Making a shocked mouth
+        document.body.addEventListener("keydown", shockedMouth);
+        function shockedMouth(x)
+        {
+            if(x.key == "b"){
+                document.getElementById("wideMouth").style.visibility = "visible";
+            }
+        }
+        document.body.addEventListener("keyup", calmMouth);
+        function calmMouth(e)
+        {
+            var div = document.getElementById("wideMouth");
+            if(e.key == "b"){
+                div.style.visibility = "hidden";
+            }
+        }
+
+        //Blinking eyes
+        document.body.addEventListener("keydown", leftEyeClose);
+        function leftEyeClose(x)
+        {
+            if(x.key == "c"){
+                document.getElementById("eyelid1").style.visibility = "visible";
+            }
+        }
+        document.body.addEventListener("keyup", leftEyeOpen);
+        function leftEyeOpen(e)
+        {
+            var div = document.getElementById("eyelid1");
+            if(e.key == "c"){
+                div.style.visibility = "hidden";
+            }
+        }
+        document.body.addEventListener("keydown", rightEyeClose);
+        function rightEyeClose(x)
+        {
+            if(x.key == "v"){
+                document.getElementById("eyelid2").style.visibility = "visible";
+            }
+        }
+        document.body.addEventListener("keyup", rightEyeOpen);
+        function rightEyeOpen(e)
+        {
+            var div = document.getElementById("eyelid2");
+            if(e.key == "v"){
+                div.style.visibility = "hidden";
+            }
+        }
+        //Blink eyes
+        document.body.addEventListener("keydown", bothEyesClose);
+        function bothEyesClose(x)
+        {
+            if(x.key == "x"){
+                document.getElementById("eyelid1").style.visibility = "visible";
+                document.getElementById("eyelid2").style.visibility = "visible";
+            }
+        }
+        document.body.addEventListener("keyup",bothEyesOpen);
+        function bothEyesOpen(x)
+        {
+            var eyelid1 = document.getElementById("eyelid1");
+            var eyelid2 = document.getElementById("eyelid2");
+            if(x.key == "x"){
+                eyelid1.style.visibility = "hidden";
+                eyelid2.style.visibility = "hidden";
+            }
+        }
+        //Move eyes
+        var rightEyeRight = document.getElementById("rightLookingRight");
+        var leftEyeRight = document.getElementById("leftLookingRight");
+        var rightEyeCenter = document.getElementById("rightLookingCenter");
+        var leftEyeCenter = document.getElementById("leftLookingCenter");
+        var rightEyeUp = document.getElementById("rightLookingUp");
+        var leftEyeUp = document.getElementById("leftLookingUp");
+        var rightEyeLeft = document.getElementById("rightLookingLeft");
+        var leftEyeLeft = document.getElementById("leftLookingLeft");
+        var rightEyeDown = document.getElementById("rightLookingDown");
+        var leftEyeDown = document.getElementById("leftLookingDown");
+
+        document.body.addEventListener("keydown",lookRight);
+        document.body.addEventListener("keyup",lookCenter);
+        document.body.addEventListener("keydown",lookLeft);
+        document.body.addEventListener("keydown",lookUp);
+        document.body.addEventListener("keydown",lookDown);
+        function lookUp(w){
+            if(w.key == 'w'){
+                rightEyeCenter.style.visibility = "hidden";
+                leftEyeCenter.style.visibility = "hidden";
+                rightEyeUp.style.visibility = "visible";
+                leftEyeUp.style.visibility = "visible";
+            }
+        }
+        function lookDown(s){
+            if(s.key == 's'){
+                rightEyeCenter.style.visibility = "hidden";
+                leftEyeCenter.style.visibility = "hidden";
+                rightEyeDown.style.visibility = "visible";
+                leftEyeDown.style.visibility = "visible";
+            }
+        }
+        function lookLeft(a){
+            if(a.key == 'a'){
+                rightEyeLeft.style.visibility = "visible";
+                leftEyeLeft.style.visibility = "visible";
+                rightEyeCenter.style.visibility = "hidden";
+                leftEyeCenter.style.visibility = "hidden";
+            }
+        }
+        function lookRight(d)
+        {
+            if(d.key == 'd'){
+                rightEyeCenter.style.visibility = "hidden";
+                leftEyeCenter.style.visibility = "hidden";
+                rightEyeRight.style.visibility = "visible";
+                leftEyeRight.style.visibility = "visible";
+            }
+        }
+        function lookCenter(letter)
+        {
+            if(letter.key == 'a' || letter.key == 'w' || letter.key == 's' || letter.key == 'd'){
+                rightEyeRight.style.visibility = "hidden";
+                leftEyeRight.style.visibility = "hidden";
+                rightEyeCenter.style.visibility = "visible";
+                leftEyeCenter.style.visibility = "visible";
+                rightEyeUp.style.visibility = "hidden";
+                leftEyeUp.style.visibility = "hidden";
+                rightEyeLeft.style.visibility = "hidden";
+                leftEyeLeft.style.visibility = "hidden";
+                rightEyeDown.style.visibility = "hidden";
+                leftEyeDown.style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>

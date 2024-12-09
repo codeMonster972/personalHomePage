@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- The header sets the character set, meta description, title (the words in the tab), and 
+    links to the Google font api. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Photo gallery for JohnMichael's hobbies.">
+        <title>Gallery - JohnMichael Stanley</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+    <!-- This is the body of the website.  This is where all the visible stuff happens. -->
+    <body class="body_content">
+        <header class="border">
+            <!-- The heading. -->
+            <h1 class="big">JohnMichael Stanley</h1>
+            <!-- The links section.  New this module is a flexbox responsive design.  Instead of a list this time it is divs.  I chose that
+            because of the bullet points.  It felt cleaner that way. -->
+            <nav>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="favorites.html">Favorites</a></div>
+                <div><a href="mailto:jdstanley143454@mymail.tstc.edu">Email</a></div>
+                <div><a href="gallery.html">Gallery</a></div>
+                <div><a href="resume.html">Resume</a></div>
+                <div><a href="contact-me.html">Contact&nbsp;Me</a></div>
+            </nav>
+        </header>
+        <main>
+            <h2>Hobbies</h2>
+            <p>I started bringing my oldest to taekwondo as a cheaper alternative to physical therapy. 
+                My second and third children also joined and I found myself in the back of the class trying
+                to finish up work on a laptop which didn't work very well. So, I joined as well looking
+                for exercise and the shared experience with my kids.<br><br>
+                Fishing with my dad has been an important activity since I was a boy.  He would take me back
+                to his childhood home on the coast to catch red fish and speckled trout.<br><br>
+                Camping both with a scouting group and in an RV is another way I spend time with the people I 
+                care about.  I grew up in a group called Royal Rangers, but the best group I've found for my sons is a Trail Life 
+                group.
+            </p>
+            <table>
+                <caption id="stanleyKids">Stanley Kids</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Hobby</th>
+                        <th scope="col">Favorite Color</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Elliot</td>
+                        <td>13</td>
+                        <td>Robotics</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr>
+                        <td>Grant</td>
+                        <td>11</td>
+                        <td>Sports</td>
+                        <td>Green</td>
+                    </tr>
+                    <tr>
+                        <td>Norah</td>
+                        <td>8</td>
+                        <td>Theater</td>
+                        <td>Pink and Purple</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <!-- I added this h3 in response to your feedback. -->
+            <h3>Hover for caption.</h3>
+            <!-- This is the responsive gallery.  The grid css is on the styles sheet, so I'll give more over there.  I had trouble with the figcaption appearing to the left
+            of the image.  My fix there was to limit the width of the figure. I also had to set an absolute height to the figure because the different amounts of text for
+        each caption was causing the images to misalign. -->
+            <div id="pictures">
+                
+                <div class="col">
+                    <figure id="bigRed">
+                        
+                        <img src="Images/bigRedSmall.png"
+                        width="288"
+                        height="216"
+                        alt="My dad with a big red fish">
+                        <figcaption>My dad with a big red fish.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure id="fishKiss">
+                        <img src="Images/fishKissSmall.png"
+                        width="288"
+                        height="216"
+                        alt="My daughter kissing a fish">
+                        <figcaption>My daughter kissing her fish.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure id="knotTying">
+                        <img src="Images/knotTyingSmall.png"
+                        width="288"
+                        height="216"
+                        alt="My oldest son learing his knots">
+                        <figcaption>My oldest son learning knots.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure id="smallRangers">
+                        <img src="Images/smallRangersSmall.png"
+                        width="288"
+                        height="216"
+                        alt="My sons at a Royal Rangers animals presentation.">
+                        <figcaption>My sons at a Royal Rangers animals presentation.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure id="rvFamily">
+                        <img src="Images/rvFamilySmall.png"
+                        width="288"
+                        height="216"
+                        alt="My family camping in the RV">
+                        <figcaption>My family camping in the RV.</figcaption>
+                    </figure>
+                </div>
+                <div class="col">
+                    <figure id="tkdSmall">
+                        <img src="Images/tkdSmall.png"
+                        width="288"
+                        height="216"
+                        alt="My two martial artists practicing for a belt test.">
+                        <figcaption>My two martial artists practicing for a belt test.</figcaption>
+                    </figure>
+                </div>
+            </div>
+                <video src="Videos/laFortunaZipLine.mp4" controls poster="Images/laFortunaPoster.png" muted>
+                    <source src="video/laFortunaZipLine.webm">
+                    <source src="video/laFortunaZipLine.ogv"><!--These source tags give alternatives to browsers that don't support mp4. However, the W3 validator didn't like 
+                    the source tags.  I'm not sure what the issue is.-->
+                    Your browser doesn't support the HTML5 video element.
+                </video>
+            
+        </main>
+        <!-- Semantic tags like footer make it easier for screen readers and webcrawlers to understand the content on this page. -->
+        <footer>
+            <p>Copyright &copy; 2024. <a href="mailto:jdstanley143454@mymail.tstc.edu" target="Student email for JMS">JohnMichael Stanley.</a> All rights reserved.</p>
+        </footer>
+    </body>
+</html>

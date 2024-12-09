@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+     <!-- The header sets the character set, meta description, title (the words in the tab), and 
+    new today links to the Google font api. --><head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Resume for JohnMichael Stanley.">
+        <title>Resume - JohnMichael Stanley</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+    <!-- This is the body of the website.  This is where all the visible stuff happens. -->
+    <body class="body_content">
+        <header class="border">
+            <!-- The headings. -->
+            <h1 class="big">JohnMichael Stanley</h1>
+            <!-- The links section -->
+            <nav>
+                <div><a href="index.html">Home</a></div>
+                <div><a href="favorites.html">Favorites</a></div>
+                <div><a href="mailto:jdstanley143454@mymail.tstc.edu">Email</a></div>
+                <div><a href="gallery.html">Gallery</a></div>
+                <div><a href="resume.html">Resume</a></div>
+                <div><a href="contact-me.html">Contact&nbsp;Me</a></div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Tech Educator</h2>
+                <!-- I had an issue here with the validator.  It didn't like the width="50%" here.  I already had it in the style sheet anyway, so I took it out. -->
+                <img 
+                src="images/profilePicBW.png"
+                alt="black and white image of handsome guy in glasses"
+                id="profilePic">
+                <p>Passionate about leveraging my extensive teaching experience and diverse professional background, I am a dedicated computer science educator with a total of 12 years in the teaching field, including two focused specifically on computer science. My career journey has also encompassed three years as an investment banker and six years as a children's pastor, highlighting my ability to adapt and thrive in varied environments. With a strong foundation in education and a deep understanding of programming and software development, I am eager to transition into the development industry, where I can apply my problem-solving skills, technical expertise, and commitment to continuous learning to create innovative solutions and contribute to dynamic projects.</p>
+            </section>
+          <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+            <div id="projects" class="whiteBackground"> 
+                <section>
+                    <h2>Featured Projects</h2>
+                    <p>View selected projects below. More information can be found at <a href="http://johnmichaelstanley.com" target="JohnMichaelStanley">johnmichaelstanley.com</a>.</p>
+
+                    <section>
+                        <h3>Smiley Face Puppet</h3>
+                        <img src="images/smilePuppetThumbnail.png" alt="smiley face" id="smileyFace">
+                        <p class="right">This is a digital puppet I made for the kids at church.  I was inspired by a friend's project.
+                            However, his version is very different. Use keys 'space','c','v',and 'b' to control him.
+                        </p>
+                        <a href="puppetSVG.html" target="puppet">Smiley Puppet</a>
+                    </section>
+
+                </section>
+                <!-- I'm getting an error in the dev console here for the little lemon iframe, but I'm not going to do anything with it now. -->
+                <section>
+                    <h3 id="littleLemon">Little Lemon Table Reservation Prototype</h3>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLFG7WW1tKoCAc8380tLPdT%2FExercise-Prototype-Item-6%3Fnode-id%3D12-52%26t%3DDUrvvT2IuweRVk3l-1%26scaling%3Dscale-down%26page-id%3D0%253A1" allowfullscreen></iframe>
+                    <p>I've been working at learning every part of the stack for the classes I teach as my students are expected to produce a capstone project at the end of their senior and they can't work on teams. I completed the Reserve a Table section of this UI design.  This came from Meta's Frontend course.</p>
+                </section>
+            </div> 
+            <!-- End of Project block. -->
+            <!-- ***********************  WORK EXPERIENCE  *********************** -->
+            <div id="workExperience"> 
+                <section>
+                    <h2>Work Experience</h2>
+
+                    <section>
+                    <h3>Computer Science Teacher</h3>
+                    <p>Uplift Education</p>
+                    <p>2022 - Present</p>
+                    <p>Web Design and Computer Science 1 -2</p>
+                    <ul>
+                        <li>Promoted to department facilitator.</li>
+                        <li>Increased International Baccalaureate scores by 25%</li>
+                        <li>Rebuilt program after the previous teacher left and rebuilt it when the standards changed</li>
+                    </ul>
+                    </section>
+                    <!-- End of Job block. -->
+                </section>
+                <section>
+                    <h3>Vice Principal and Instructional Coach</h3>
+                    <p>Trinity Basin Preparatory</p>
+                    <p>2018 - 2022</p>
+                    <p>Instructional Leader</p>
+                    <ul>
+                    <li>Supported and coached new teachers focusing on classroom managment</li>
+                    <li>Created district science assessments</li>
+                    <li>Opened new campus location as vice principal</li>
+                    </ul>
+                </section>
+            </div>   
+            <!-- End of Job block. -->
+
+            <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+            <div id="education" class="whiteBackground">
+                <section>
+                    <h2>Education</h2>
+
+                    <section>
+                    <h3>Texas State Technical College</h3>
+                    <p>2024 - Present</p>
+                    <p>Computer Programming Technology-Software Developer </p>
+                    </section>
+                    <!-- End of School block. -->
+                </section>
+                <section>
+                    <h3>Stephen F. Austin State University</h3>
+                    <p>2015 - 2016</p>
+                    <p>Educational Leadership</p>
+                </section>
+                <section>
+                    <h3>Southwestern Assemblies of God University</h3>
+                    <p>1998 - 2002</p>
+                    <p>Church Ministry</p>
+                </section>
+                <!-- End of School block. -->
+            </div>
+        </main>
+            <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+        <footer>
+            <h2>Let's Keep in Touch!</h2>
+
+            <ul>
+                <li><a href="mailto:johnstanley02@gmail.com">johnstanley02@gmail.com  |  </a></li>
+                <li><a href="http://johnmichaelstanley.com" target="johnmichaelstanley.com">johnmichaelstanley.com  |  </a></li>
+                <li><a href="https://twitter.com/johnstanley1" target="_blank">Twitter  |  </a></li>
+                <li><a href="https://www.linkedin.com/in/johnmichaeldavidstanley/" target="_blank">LinkedIn  |  </a></li>
+                <li><a href="https://www.facebook.com/johnmichaelstanley" target="_blank">Facebook</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
+
+
+   
